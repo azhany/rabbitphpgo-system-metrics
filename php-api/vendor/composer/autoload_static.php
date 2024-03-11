@@ -4,19 +4,27 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit33732da5926c61a66a1c44abc52a98dd
+class ComposerStaticInit37e89e1d4ec34292a0bde265cf920861
 {
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
-            'PhpAmqpLib\\' => 11,
+            'Psr\\Log\\' => 8,
+        ),
+        'B' => 
+        array (
+            'ButterAMQP\\' => 11,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'PhpAmqpLib\\' => 
+        'Psr\\Log\\' => 
         array (
-            0 => __DIR__ . '/..' . '/php-amqplib/php-amqplib/PhpAmqpLib',
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'ButterAMQP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/skolodyazhnyy/butter-amqplib/src',
         ),
     );
 
@@ -27,9 +35,9 @@ class ComposerStaticInit33732da5926c61a66a1c44abc52a98dd
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit33732da5926c61a66a1c44abc52a98dd::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit33732da5926c61a66a1c44abc52a98dd::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit33732da5926c61a66a1c44abc52a98dd::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit37e89e1d4ec34292a0bde265cf920861::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit37e89e1d4ec34292a0bde265cf920861::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit37e89e1d4ec34292a0bde265cf920861::$classMap;
 
         }, null, ClassLoader::class);
     }

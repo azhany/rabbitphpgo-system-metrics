@@ -1,5 +1,0 @@
-{
-    "require": {
-        "skolodyazhnyy/butter-amqplib": "dev-master"
-    }
-}

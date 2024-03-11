@@ -34,7 +34,7 @@ This documentation outlines the steps to send system metrics (including CPU usag
 1. Install Butter AMQP library using Composer:
    ```bash
     composer require skolodyazhnyy/butter-amqplib dev-master
-2. Open a command prompt on your Windows host and navigate to the directory containing the PHP file (php-api-v2).
+2. Open a command prompt on your Windows host and navigate to the directory containing the PHP file (php-api).
 3. Run the PHP application using the following command:
     php index.php
 
