@@ -1,0 +1,36 @@
+filter:
+  paths:
+    - 'src/*'
+  excluded_paths:
+    - 'src/AMQP091/Framing/*'
+    - 'src/AMQP091/Framing/Frame.php'
+    - 'src/AMQP091/Framing/Properties.php'
+    - 'src/Exception/AMQP'
+    - 'src/Exception/AMQPException.php'
+
+checks:
+  php: true
+
+coding_style:
+  php:
+    spaces:
+      before_parentheses:
+        closure_definition: true
+
+build:
+  environment:
+    php:
+      version: 5.6
+  dependencies:
+    before:
+      - echo 'deb http://www.rabbitmq.com/debian/ testing main' | sudo tee /etc/apt/sources.list.d/rabbitmq.list
+      - wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -
+      - sudo apt-get update
+      - sudo apt-get install -y rabbitmq-server
+  tests:
+    override:
+      -
+        command: 'RABBITMQ_URL=//guest:guest@127.0.0.1 phpunit --coverage-clover=coverage.colver'
+        coverage:
+          file: 'coverage.colver'
+          format: 'clover'
